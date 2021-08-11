@@ -23,6 +23,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-rbenv'
   Plug 'tpope/vim-bundler'
   Plug 'ludovicchabant/vim-gutentags'
+  Plug 'ruanyl/coverage.vim'
 call plug#end()
 
 set encoding=UTF-8
@@ -33,6 +34,15 @@ let NERDTreeShowHidden=1
 syntax on
 colorscheme onedark
 
-au FileType gitcommit setlocal tw=72
-au FileType javascript set tabstop=4|set shiftwidth=4444|set expandtab
+au FileType html setlocal ts=2 sts=2 sw=2
+au FileType ruby setlocal ts=2 sts=2 sw=2
+au FileType javascript setlocal ts=4 sts=4 sw=4
+
 au FocusLost * silent! wall
+
+" Spell check
+set spelllang=en
+set spellfile=$HOME/projects/dotfiles/vim/spell/en.utf-8.add
+au BufRead,BufNewFile *.js setlocal spell
+au FileType gitcommit,markdown,ja setlocal spell
+set complete+=kspell
