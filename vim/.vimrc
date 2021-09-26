@@ -46,3 +46,7 @@ set spellfile=$HOME/projects/dotfiles/vim/spell/en.utf-8.add
 au BufRead,BufNewFile *.js setlocal spell
 au FileType gitcommit,markdown,ja setlocal spell
 set complete+=kspell
+
+" Highlight extra space
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/
