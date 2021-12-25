@@ -107,10 +107,6 @@ dlogs() { docker-compose logs --tail=1 -f $1; }
 # Other alias
 alias dps="docker-compose ps"
 
-# Use NVM
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-
 # Use rbenv
 eval "$(rbenv init -)"
 
