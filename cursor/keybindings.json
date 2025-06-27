@@ -53,5 +53,13 @@
     {
       "key": "shift+cmd+0",
       "command": "gitlens.openFileOnRemote"
+    },
+    {
+      "key": "cmd+[",
+      "command": "workbench.action.navigateBack"
+    },
+    {
+      "key": "cmd+]",
+      "command": "workbench.action.navigateForward"
     }
 ]
