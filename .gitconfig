@@ -1,40 +1,13 @@
 [core]
 	editor = vim
-	excludesfile = /Users/carolinecanto/.gitignore_global
 [user]
 	email = carolinesalibc@gmail.com
-	name = Caroline
+	name = carolinesalib
 [branch]
   	autosetuprebase = always
-[branch "master"]
-  	rebase = true
 [push]
   	default = current
 [pull]
   	default = current
-[color]
-	ui = true
-	diff = auto
-	branch = auto
-	interactive = auto
-[color "status"]
-	added = green
-	changed = blue
-	untracked = magenta
-	deleted = red
 [alias]
-	ch = checkout
-	st = status
-	cm = commit
-	me = merge
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    sw = "!f() { git switch $(git branch | fzf); }; f"
